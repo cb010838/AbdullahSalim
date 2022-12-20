@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+} 
+h1, h2, h3, h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+    text-shadow: 1px 1px rgb(32, 31, 31);
+    margin: 60px 0;
+} 
+body{
+    padding: 5px;
+    background: url(images/leaf-bg\ \(1\).svg);
+    font-family: 'Dosis', sans-serif;
+} 
+#backgroundImg{
+    background: url(images/musuem2.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+@media screen and (max-width: 707px) {
+    #backgroundImg{
+        width: auto;
+    }
+}
+
+.content1{
+    padding: 20px;
+}
+
+.content1 p{
+    font-size: 19px;
+    padding: 8px;
+    text-align: justify;
+}
+.map-wrapper{
+    max-width: 500px;
+    margin: 5px auto;
+    margin-bottom: 20px;
+    border: 3px solid rgb(184, 158, 11);
+}
+.map{
+    width: 100%;
+}
+.content2{
+    width: 58%;
+    margin: 15px auto;
+    padding: 5px;
+    background: #92939425;
+    border-radius: 20px;
+}
+.content2 p{
+    margin: 0 auto;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+}
+@media only screen and (max-width: 707px) {
+    .content2 p{
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+/*--------- BUTTON ---------*/
+
+
+#bookNow a:link, a:visited {
+    background-color: red;
+    color: black;
+    padding: 14px 25px;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 45%;
+    margin-top: 20px; 
+    font-family: 'Dosis', sans-serif;
+    border-radius: 12px;   
+  }
+  
+ a:hover, a:active {
+    background-color: rgb(138, 66, 66);
+  }
+
+/*--------- IMG GALLERY ---------*/
+
+.gallery{
+    width: 97%;
+    display: flex;
+    margin-left: 15px;
+    flex-flow: row wrap;
+}
+  
+.gallery__item{
+    width: 100%;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 1px 2px 40px 2px rgba(160, 160, 160, .5);
+}
+.gallery__image-caption{
+    margin-top: 16px;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 5px;
+    text-transform: capitalize;
+}
+.gallery__image{
+    width:100%;
+    display:block;
+}
+  
+@media only screen and (min-width: 540px){
+    .gallery__item{
+        flex-basis: calc(50% - 16px);
+    }
+}
+  
+@media only screen and (min-width: 770px){
+    .gallery__item{
+        flex-basis: calc((100% / 3) - 32px);
+    }
+}
+  
+@media only screen and (min-width: 960px){
+.gallery__item{
+        flex-basis: calc((100% / 4) - 32rpx);
+    }
+}
+
+/*--------- NAV & FOOTER ---------*/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(19, 95, 95);
+    color: #fff;
+    text-decoration: none;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   .logo {
+    font-size: 38px;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: rgb(56, 51, 51);
+   }
+   a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+   .menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+   .services {
+    position: relative; 
+   }
+   .dropdown {
+    list-style: none;
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; 
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 10px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   .services:hover .dropdown {
+    display: block;
+   }
+   
+  input[type=checkbox]{
+    display: none;
+   } 
+   
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   
+   @media (max-width: 1100px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:rgb(43, 134, 134);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    background-color:#4c9e9e;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   }
+
+
+footer{
+font-family: Arial, Helvetica, sans-serif;
+box-sizing: border-box;
+}
+.footer{
+margin-top: 50px;
+width: 100%;
+padding: 100px 12%;
+background: rgb(13, 94, 94);
+color: white;
+display: flex;
+}
+.footer div{
+text-align: center;
+}
+.center{
+flex-grow: 2;
+}
+.footer div h3{
+font-weight: 300;
+margin-bottom: 30px;
+letter-spacing: 1px;
+}
+.left a{
+display: block;
+text-decoration: none;
+color: white;
+margin-bottom: 10px;
+}
+
+.icons{
+margin-top: 16px;
+display: flex;
+
+}
+.icons i{
+color: white;
+font-size: 25px;
+margin: 15px;
+cursor: pointer;
+}
+a:hover{
+background: #4c9e9e;
+transition: .5s;
+}
+
