@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+  background: url(images/leaf-bg\ \(1\).svg);
+  font-family: 'Dosis', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 7px;
+  padding: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#backgroundImg {
+  background: url(images/ceylon-tea-1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+
+.industry {
+  border-radius: 30px;
+  background: rgba(3, 51, 3, 0.452);
+  width: 75%;
+  height: auto;
+  margin: 50px 0 40px 13%;
+  padding: 20px;
+  text-align: justify;
+  line-height: 16px;
+  letter-spacing: .8px;
+  font-size: large;
+  font-weight: 480;
+}
+
+#heading1 {
+  font-size: x-large;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#industryImg {
+  float: left;
+  /* margin-top: 60px; */
+  padding: 10px 7px;
+  /*  height: 42px;
+  width: 295px;  */
+}
+
+#heading {
+  font-size: xx-large;
+  margin: 55px 0;
+  padding-top: 100px;
+}
+
+#paragraph {
+  padding: 0 25px;
+  line-height: 16px;
+  letter-spacing: .8px;
+  font-weight: 540;
+}
+
+#doyle {
+  text-align: center;
+  padding: 55px 60px;
+  font-size: x-large;
+  font-weight: 600;
+
+}
+
+/*--------- ZOOM IMAGES ---------*/
+#zoom {
+  padding: 5px;
+  text-align: center;
+
+}
+
+.img-zoom {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.img-zoom img {
+  -webkit-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  margin: 0px 20px;
+  box-shadow: 20px 20px 50px rgb(216, 210, 210);
+}
+
+.img-zoom img:hover {
+  -webkit-transform: scale(1.21);
+  -ms-transform: scale(1.21);
+  transform: scale(1.21);
+}
+@media screen and (max-width: 1100px) {
+  .img-zoom{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  .img-zoom img{
+    margin: 20px auto;
+  }
+}  
+
+
+/*--------- HISTORY TIMELINE ---------*/
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+/* vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgb(17, 61, 17);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* container around content */
+.container {
+  padding: 6px 0;
+  position: relative;
+  width: 50%;
+}
+
+/* circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(233, 201, 22);
+  border: 4px solid rgb(194, 168, 24);
+  top: -15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -16px;
+}
+.content {
+  padding: 20px 30px;
+  background-color: rgba(8, 56, 8, 0.301);
+  position: relative;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 500;
+ /* text-shadow: .5px .5px #ffdf01;  */
+}
+
+@media screen and (max-width: 1100px) {
+
+  .timeline::after {
+    left: 31px;
+  }
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  .right {
+    left: 0%;
+  }
+}
+
+ol {
+  display: table;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  list-style: lower-roman;
+
+}
+ol li{
+  line-height-step: 120px;
+  margin-left: 100px;
+}
+
+/*--------- NAVIGATION & FOOTER AREA ---------*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(26, 114, 114);
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+.logo {
+  font-size: 38px;
+  font-family: 'Pacifico', cursive;
+  text-decoration: none;
+  color: rgb(56, 51, 51);
+ }
+ a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+.services {
+  position: relative;
+}
+
+.dropdown {
+  list-style: none;
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li+li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+@media (max-width: 1100px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+
+  .menu li+li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked~.menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+
+  #heading1 {
+    margin: 10px 0;
+  }
+}
+
+
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  padding: 100px 12%;
+  background: rgb(11, 78, 78);
+  color: white;
+  display: flex;
+}
+
+.footer div {
+  text-align: center;
+}
+
+.center {
+  flex-grow: 2;
+}
+
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.left a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.icons {
+  margin-top: 16px;
+  display: flex;
+
+}
+
+.icons i {
+  color: white;
+  font-size: 25px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+a:hover {
+  background: #4c9e9e;
+  transition: .5s;
+}
